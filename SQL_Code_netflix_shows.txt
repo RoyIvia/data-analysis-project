@@ -1,0 +1,26 @@
+select * From netflixshows.netflix_titles ;
+
+-- Counting the number of records
+SELECT COUNT(*) FROM netflixshows.netflix_titles;
+
+-- Calculating the average of a numeric column
+SELECT AVG(duration) FROM netflixshows.netflix_titles;
+
+-- Summing a numeric column
+SELECT SUM(duration) FROM netflixshows.netflix_titles;
+
+SELECT release_year, COUNT(*) as count
+FROM netflixshows.netflix_titles
+GROUP BY release_year
+ORDER BY release_year;
+
+
+-- Filter data based on conditions
+SELECT * FROM netflixshows.netflix_titles
+WHERE country = 'United States'
+ORDER BY release_year;
+
+
+
+ 
+ 
